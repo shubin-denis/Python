@@ -15,4 +15,5 @@ if revenue > cost:
     profit_of_one = round(profit / staff, 2)
     print(f'Прибыль в расчете на одного сотрудника составляет: {profit_of_one}$')
 else:
-    print('Фирма потерпела убытки')
+    loss = cost - revenue
+    print(f'Фирма потерпела убытки в размере {loss}$')
