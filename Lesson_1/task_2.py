@@ -4,9 +4,7 @@
 user_seconds = int(input('Введите количество секунд: '))
 
 hours = user_seconds // 3600
-minutes_on_hours = hours * 60
-minutes = (user_seconds // 60) - minutes_on_hours
-seconds_sum = (hours * 3600) + (minutes * 60)
-seconds = user_seconds % seconds_sum
+minutes = (user_seconds // 60) - (hours * 60)
+seconds = user_seconds % 60
 
-print(f'{hours}:{minutes}:{seconds}')
+print(f'{hours:02}:{minutes:02}:{seconds:02}')

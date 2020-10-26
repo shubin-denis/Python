@@ -5,15 +5,14 @@
 
 revenue = int(input('Значение выручки фирмы: '))
 cost = int(input('Значение издержек фирмы: '))
+profit = revenue - cost
 
 if revenue > cost:
-    profit = revenue - cost
-    profitability = round((profit * 100) / revenue)
-    print(f'Результат работы фирмы - прибыль в размере: {profit}$')
-    print(f'Рентабельность составляет {profitability}%')
+    print(f'Результат работы фирмы - прибыль в размере: {profit:.2f}$')
+    print(f'Рентабельность составляет {(profit * 100) / revenue:.0f}%')
     staff = int(input('Количество сотрудников в фирме: '))
-    profit_of_one = round(profit / staff, 2)
-    print(f'Прибыль в расчете на одного сотрудника составляет: {profit_of_one}$')
+    print(f'Прибыль в расчете на одного сотрудника составляет: {profit / staff:.2f}$')
+elif revenue < cost:
+    print(f'Фирма потерпела убытки в размере {profit:.2f}$')
 else:
-    loss = cost - revenue
-    print(f'Фирма потерпела убытки в размере {loss}$')
+    print('Фирма работает в 0')
