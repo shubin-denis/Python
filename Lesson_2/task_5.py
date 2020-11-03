@@ -11,20 +11,12 @@ my_list = [7, 5, 3, 3, 2]
 
 user_num = int(input('Введите значение рейтинга: '))
 
-i = 0
-
-for el in my_list:
-    if user_num == el:
-        my_list.insert(my_list.index(el) + 1, user_num)
-        break
-    elif user_num > my_list[0]:
-        my_list.insert(0, user_num)
-        break
-    elif user_num < my_list[i - 1] and user_num > my_list[i]:
-        my_list.insert(my_list.index(el), user_num)
-        break
-    elif user_num < my_list[- 1]:
-        my_list.append(user_num)
-        break
-    i += 1
-print(my_list)
+for i, el in enumerate(my_list):
+    if user_num < el:
+        continue
+    my_list.insert(i, user_num)
+    print(my_list)
+    break
+else:
+    my_list.append(user_num)
+    print(my_list)

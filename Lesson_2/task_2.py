@@ -3,17 +3,8 @@
 # При нечетном количестве элементов последний сохранить на своем месте.
 # Для заполнения списка элементов необходимо использовать функцию input().
 
-name = list(input('Введите свое имя: '))
+my_list = list(input('Введите свое имя: '))
 
-i = 0
-
-while i < len(name):
-    if i % 2 != 0:
-        if i == len(name) - 1:
-            break
-        i += 1
-        continue
-    pop_el = name.pop(i)
-    name.insert(i + 1, pop_el)
-    i += 1
-print(f'Обмен элементами: {name}')
+for i in range(1, len(my_list), 2):
+    my_list[i - 1], my_list[i] = my_list[i], my_list[i - 1]
+print(my_list)

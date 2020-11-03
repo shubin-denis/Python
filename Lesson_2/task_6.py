@@ -35,17 +35,16 @@ print(goods_list)
 #                 (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
 #                 (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
 #              ]
-statistic = {}
+calculation = {}
 for el in goods_list:
-   for goods_key, goods_value in el[1].items():
-       if goods_key in statistic:
-           statistic[goods_key].append(goods_value)
-       else:
-           statistic[goods_key] = [goods_value]
+    for goods_key, goods_value in el[1].items():
+        if goods_key in calculation:
+            calculation[goods_key].append(goods_value)
+        else:
+            calculation[goods_key] = [goods_value]
 
-print(statistic)
+print(calculation)
 
 # one_good_list = list(goods_list[0])
 # print(one_good_list)
 # print(one_good_list[1]['название'])
-

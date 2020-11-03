@@ -4,11 +4,5 @@
 
 words_list = input('Введите слова через пробел: ').split()
 # print(words_list)
-i = 0
-for el in words_list:
-    if len(el) > 10:
-        print(f'{i + 1}) {el[:10]}')
-        i += 1
-    else:
-        print(f'{i + 1}) {el}')
-        i += 1
+for i, el in enumerate(words_list):
+    print(i + 1, el[:10])
