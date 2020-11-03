@@ -8,8 +8,9 @@ def int_func(text):
     return text.title()
 
 
-text_1 = 'fadsf adgfa adsgfa dgadgsad'
 user_text = input('Введите слово/предложение: ')
 
 print(f'А вот оно же, но с заглавной буквы: {int_func(user_text)}')
+# Или можно так?
+print(f'А вот оно же, но с заглавной буквы: {(lambda text: text.title())(user_text)}')
 
