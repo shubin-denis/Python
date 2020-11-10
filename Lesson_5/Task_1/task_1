@@ -1,0 +1,12 @@
+# Создать программно файл в текстовом формате, записать в него построчно данные,
+# вводимые пользователем. Об окончании ввода данных свидетельствует пустая строка.
+
+text = input('Write text.txt (for "exit" write "q"): ')
+
+while text.count('q') != 1:
+    with open('new_file.txt', 'a') as file:
+        file.write(text)
+        file.write('\n')
+
+    text = input('Write text.txt (for "exit" write "q"): ')
+
