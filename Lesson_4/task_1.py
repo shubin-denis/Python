@@ -7,7 +7,14 @@ script_name, operating_time, salary, prize = argv
 
 
 def get_wages(time, money, more_money):
-    return (int(time) * int(money)) + int(more_money)
+    return time * money + more_money
 
 
-print(f'Заработная плата составит: {get_wages(operating_time, salary, prize)}')
+try:
+    int(operating_time)
+    int(salary)
+    int(prize)
+except ValueError or TypeError:
+    print('Введен неверный формат данных!')
+
+print(f'Заработная плата составит: {get_wages(int(operating_time), int(salary), int(prize))}')
