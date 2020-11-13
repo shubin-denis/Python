@@ -5,8 +5,8 @@
 # Результат: [12, 44, 4, 10, 78, 123].
 
 my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-x = 0
-new_list = [num for i, num in enumerate(my_list) if my_list[i] > my_list[i - 1] and i != x]
+
+new_list = [num for i, num in enumerate(my_list) if my_list[i] > my_list[i - 1] and i]
 
 print(new_list)
 

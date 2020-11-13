@@ -14,7 +14,9 @@ try:
     int(operating_time)
     int(salary)
     int(prize)
-except ValueError or TypeError:
+except ValueError:
     print('Введен неверный формат данных!')
+else:
+    print(f'Заработная плата составит: {get_wages(int(operating_time), int(salary), int(prize))}')
 
-print(f'Заработная плата составит: {get_wages(int(operating_time), int(salary), int(prize))}')
+
