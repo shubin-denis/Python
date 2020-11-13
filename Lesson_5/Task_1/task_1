@@ -3,7 +3,7 @@
 
 text = input('Write text.txt (for "exit" write "q"): ')
 
-while text.count('q') != 1:
+while text != 'q':
     with open('new_file.txt', 'a') as file:
         file.write(text)
         file.write('\n')
